@@ -21,7 +21,7 @@ cd ..
 docker run --rm -v $(pwd):/project -w /project signal-android ./gradlew clean assemblePlayProdRelease
 
 # Verify the APKs
-python3 apkdiff/apkdiff.py build/outputs/apks/project-release-unsigned.apk path/to/SignalFromPlay.apk
+python3 reproducible-builds/apkdiff/apkdiff.py ./app/build/outputs/apk/playProd/release/Signal-Android-play-prod-x86-release-unsigned-5.xx.x.apk path/to/SignalFromPlay.apk
 ```
 
 ***
